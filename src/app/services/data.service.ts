@@ -34,4 +34,12 @@ export class DataService {
     this.questions.unshift(question);
   }
 
+  removeQuestion(question:Question){
+    for(let i = 0; i < this.questions.length; i++){
+      if(question == this.questions[i]){
+        this.questions.splice(i,1);
+      }
+    }
+  }
+
 }
